@@ -1,1 +1,2 @@
 RNG_SEED = 42
+MAX_LEN = 256
