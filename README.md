@@ -1,16 +1,20 @@
 # Wine Review NLP Project
 
 ## Overview
-The **Wine Review NLP Project** is an advanced natural language processing (NLP) system designed to analyze and process wine reviews. The project leverages state-of-the-art machine learning models, including transformer-based architectures, to extract insights, classify sentiments, and provide personalized wine recommendations. Additionally, it integrates the `nlp_helpers` module for reusable utilities such as text preprocessing, exploratory data analysis (EDA), and visualization.
+The **Wine Review NLP Project** is an advanced natural language processing (NLP) system designed to analyze and process wine reviews.
+It leverages state-of-the-art transformer models to extract insights, classify sentiments, and predict wine characteristics such as flavor, variety, and country.
+This work forms the foundation for a future **AI-driven recommendation engine**, capable of suggesting wines based on user tasting preferences expressed in natural language.
+
+Developed as part of the **Cambridge Data Science Program**, the project demonstrates scalable transformer-based modeling with high accuracy and reusable components for experimentation and deployment.
 
 ## Features
-- **Flavor Tagging**: Classifies wine reviews into flavor profiles using a pre-trained transformer model.
+- **Flavor Tagging**: Classifies wine reviews into flavor profiles using a fine-tuned transformer model.
 - **Sentiment Analysis**: Converts wine ratings into sentiment categories (positive, neutral, negative).
-- **Recommendation Engine**: Suggests wines based on user queries, combining strict and exploratory recommendations.
-- **Efficient Search**: Uses FAISS for fast similarity search on encoded wine reviews.
-- **Custom Training**: Implements a custom `Trainer` class for weighted binary classification tasks.
-- **Reusable Utilities**: Leverages the `nlp_helpers` module for text preprocessing, EDA, and visualization.
-- **Taxonomy Prediction**: Predicts wine variety and country using auxiliary classifiers.
+- **Taxonomy Prediction**: Predicts wine **variety** and **country** using auxiliary classifiers.
+- **Recommendation Engine**: Suggests wines by combining strict and exploratory matches based on user prompts.
+- **Semantic Retrieval (FAISS-free)**: Uses `sentence_transformers.util.semantic_search` to retrieve semantically similar reviews — eliminating FAISS dependency for simpler, scalable execution.
+- **Custom Training**: Implements a custom `WeightedBCETrainer` for handling class imbalance in multi-label tasks.
+- **Reusable Utilities**: Integrates the `nlp_helpers` package for text preprocessing, exploratory data analysis (EDA), and visualization.
 
 ---
 
