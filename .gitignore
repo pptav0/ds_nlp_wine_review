@@ -20,6 +20,9 @@ tests/.cache/v/cache/lastfailed
 
 # Session Data files
 .RData
+*data/
+*models/
+*tests/
 
 # Example code in package build process
 *-Ex.R
@@ -126,6 +129,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*_rev*.ipynb
 
 # pyenv
 .python-version

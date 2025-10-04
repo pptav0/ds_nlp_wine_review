@@ -1,0 +1,32 @@
+
+flowchart LR
+A[Raw Reviews and Metadata] --> B[Preprocess Clean Concat]
+
+subgraph CL [Classification Layer BERT DistilBERT]
+B --> C1[Flavor Profile Classifier]
+B --> C2[Sentiment Quality Classifier]
+B --> C3[Variety Country Predictor]
+end
+
+C1 --> D[Enriched Records]
+C2 --> D
+C3 --> D
+
+subgraph RET [Retrieval Layer]
+D --> E[Text Embeddings]
+E --> F[Vector Index FAISS Milvus]
+end
+
+subgraph REC [Recommendation Layer]
+F --> G[Candidate Set Top K]
+D --> G
+G --> H[LLM Reranker and Explanations]
+H --> I[Business Rules Two Strict One Exploratory]
+I --> J[Final Recommendations]
+end
+
+subgraph UQF [User Query Flow]
+Q[User Query Fruit Juicy Wine from Portugal] --> Q1[Facet Extraction Country PT Flavor Fruity Juicy]
+Q1 --> E
+Q1 -. filters .-> G
+end

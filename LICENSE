@@ -35,10 +35,6 @@ original license. This project as a whole is licensed under Apache 2.0.
   Copyright 2019–present UKP Lab & Hugging Face
   Licensed under the Apache License, Version 2.0
 
-- **FAISS**
-  Copyright 2017 Facebook, Inc.
-  Licensed under the MIT License
-
 - **scikit-learn, pandas, numpy, matplotlib, seaborn**
   Licensed under BSD/MIT licenses (see their respective repositories)
 
