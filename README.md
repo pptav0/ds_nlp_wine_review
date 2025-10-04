@@ -1,18 +1,18 @@
 # Wine Review NLP Project
 
 ## Overview
-The **Wine Review NLP Project** is an advanced natural language processing (NLP) system designed to analyze and process wine reviews.
-It leverages state-of-the-art transformer models to extract insights, classify sentiments, and predict wine characteristics such as flavor, variety, and country.
-This work forms the foundation for a future **AI-driven recommendation engine**, capable of suggesting wines based on user tasting preferences expressed in natural language.
+The **Wine Review NLP Project** is an advanced natural language processing (NLP) system designed to analyze and process wine reviews. It leverages state-of-the-art transformer models to extract insights, classify sentiments, and predict wine characteristics such as flavor, variety, and country. The project also demonstrates how enriched wine data can be used to build a personalized recommendation engine, capable of suggesting wines based on user preferences expressed in natural language.
 
-Developed as part of the **Cambridge Data Science Program**, the project demonstrates scalable transformer-based modeling with high accuracy and reusable components for experimentation and deployment.
+The accompanying notebook explores the project's scope, including the business case for wineries and retailers. By analyzing subjective wine reviews, the system provides discovery-driven recommendations that mimic sommelier expertise, enhancing customer engagement and supporting personalized marketing strategies.
+
+The project demonstrates scalable transformer-based modeling with high accuracy and reusable components for experimentation and deployment.
 
 ## Features
 - **Flavor Tagging**: Classifies wine reviews into flavor profiles using a fine-tuned transformer model.
 - **Sentiment Analysis**: Converts wine ratings into sentiment categories (positive, neutral, negative).
 - **Taxonomy Prediction**: Predicts wine **variety** and **country** using auxiliary classifiers.
 - **Recommendation Engine**: Suggests wines by combining strict and exploratory matches based on user prompts.
-- **Semantic Retrieval (FAISS-free)**: Uses `sentence_transformers.util.semantic_search` to retrieve semantically similar reviews — eliminating FAISS dependency for simpler, scalable execution.
+- **Semantic Retrieval**: Uses `sentence_transformers.util.semantic_search` to retrieve semantically similar reviews.
 - **Custom Training**: Implements a custom `WeightedBCETrainer` for handling class imbalance in multi-label tasks.
 - **Reusable Utilities**: Integrates the `nlp_helpers` package for text preprocessing, exploratory data analysis (EDA), and visualization.
 
