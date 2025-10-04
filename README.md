@@ -15,6 +15,7 @@ The **Wine Review NLP Project** is an advanced natural language processing (NLP)
 ---
 
 ## Folder Structure
+```plaintext
 wine_review/
 ├─ notebook/                         # Notebooks only (no libs)
 ├─ tests/                            # Unit tests (under development)
