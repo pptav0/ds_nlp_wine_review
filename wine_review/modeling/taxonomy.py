@@ -66,6 +66,7 @@ def train_one_classifier(
         logging_dir=os.path.join(out_dir, "logs"),
         logging_steps=50,
         save_total_limit=1,
+        report_to="none"
     )
 
     trainer = Trainer(
